@@ -29,7 +29,7 @@ jobs:
     - run: npm install
     # - run: npm ci
     - run: npm run build --if-present
-    # - run: npm test
+    - run: npm test
     # - run: npm run deploy
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
