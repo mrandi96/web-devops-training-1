@@ -30,6 +30,14 @@ jobs:
     # - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: Run Static Application Security Testing
+      uses: AppThreat/sast-scan-action@master
+      with:
+        type: "javascript"
+    - uses: actions/upload-artifact@v1
+      with:
+        name: sast-reports
+        path: reports
     # - run: npm run deploy
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
