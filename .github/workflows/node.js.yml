@@ -33,8 +33,9 @@ jobs:
     - name: Run Static Application Security Testing
       uses: AppThreat/sast-scan-action@master
       with:
-        type: "javascript"
-    - uses: actions/upload-artifact@v1
+        type: "nodejs"
+    - name: Generate SAST Report
+      uses: actions/upload-artifact@v1
       with:
         name: sast-reports
         path: reports
