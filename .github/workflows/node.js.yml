@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [ 14.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,20 +26,22 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm install
-    # - run: npm ci
+    - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: Run Static Application Security Testing
-      uses: AppThreat/sast-scan-action@master
-      with:
-        type: "nodejs"
-    - name: Generate SAST Report
-      uses: actions/upload-artifact@v1
-      with:
-        name: sast-reports
-        path: reports
-    # - run: npm run deploy
+    - name: Run Snyk to check for vulnerabilities (SCA)
+      uses: snyk/actions/node@master
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    # - name: Run Static Application Security Testing
+    #   uses: AppThreat/sast-scan-action@master
+    #   with:
+    #     type: "nodejs"
+    # - name: Generate SAST Report
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: sast-reports
+    #     path: reports
     - name: Deploy
       uses: crazy-max/ghaction-github-pages@v1
       with:
