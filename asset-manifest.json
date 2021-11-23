@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/web-devops-training-1/static/css/main.a617e044.chunk.css",
+    "main.js": "/web-devops-training-1/static/js/main.4e2ccc54.chunk.js",
+    "main.js.map": "/web-devops-training-1/static/js/main.4e2ccc54.chunk.js.map",
+    "runtime-main.js": "/web-devops-training-1/static/js/runtime-main.17008b28.js",
+    "runtime-main.js.map": "/web-devops-training-1/static/js/runtime-main.17008b28.js.map",
+    "static/js/2.3d7a51e8.chunk.js": "/web-devops-training-1/static/js/2.3d7a51e8.chunk.js",
+    "static/js/2.3d7a51e8.chunk.js.map": "/web-devops-training-1/static/js/2.3d7a51e8.chunk.js.map",
+    "static/js/3.f072bf03.chunk.js": "/web-devops-training-1/static/js/3.f072bf03.chunk.js",
+    "static/js/3.f072bf03.chunk.js.map": "/web-devops-training-1/static/js/3.f072bf03.chunk.js.map",
+    "index.html": "/web-devops-training-1/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/web-devops-training-1/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.3d7a51e8.chunk.js.LICENSE.txt": "/web-devops-training-1/static/js/2.3d7a51e8.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/web-devops-training-1/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17008b28.js",
+    "static/js/2.3d7a51e8.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.4e2ccc54.chunk.js"
+  ]
+}
